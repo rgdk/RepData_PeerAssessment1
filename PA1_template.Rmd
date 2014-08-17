@@ -121,7 +121,7 @@ activity_avg_data <- ddply(activity_data, c("interval","daytype"), summarise, av
 
 library('ggplot2')
 
-par(mfcol=c(2,4))
+par(mfcol=c(2,1))
 ggplot(data=activity_avg_data, 
        aes(x=interval, y=avg_steps, group=daytype)) + 
        geom_line(size=1, colour="blue") + 
